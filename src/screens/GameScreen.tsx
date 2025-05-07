@@ -2,35 +2,52 @@ import React from 'react';
 // We will import more specific components (ScenarioDisplay, ChoiceList, etc.) here later
 import { useGameStore, selectCurrentScenarioData } from '../store/gameStore';
 
+import ProjectHealthDisplay from '../components/ProjectHealthDisplay';
+import ScenarioDisplay from '../components/ScenarioDisplay';
+import RoleSelection from '../components/RoleSelection';
+import ChoiceList from '../components/ChoiceList';
+import FeedbackPanel from '../components/FeedbackPanel';
+
 const GameScreen: React.FC = () => {
   const currentScenario = useGameStore(selectCurrentScenarioData);
-  // More state and actions will be used here
+  const selectedRole = useGameStore((state) => state.selectedRole);
+  const isFeedbackMode = useGameStore((state) => state.isFeedbackMode);
+  const proceedToNextScenario = useGameStore((state) => state.proceedToNextScenario);
+  const error = useGameStore((state) => state.error);
 
   if (!currentScenario) {
-    return <div>Loading scenario... If this persists, there might be an issue.</div>;
+    // This case should ideally be handled by App.tsx routing to EndScreen
+    // but as a fallback:
+    return <div>Loading scenario or end of case study... If this persists, there might be an issue.</div>;
   }
 
   return (
     <div>
-      <h2>Game Screen</h2>
-      <p>Current Scenario: {currentScenario.title}</p>
-      {/* 
-        Placeholder for where other components will go:
-        <ProjectHealthDisplay />
-        <ScenarioDisplay />
-        
-        IF isFeedbackMode:
+      <ProjectHealthDisplay />
+      <ScenarioDisplay />
+
+      {error && isFeedbackMode && <p style={{color: 'orange'}}>Notice while processing choice: {error}</p>}
+
+
+      {isFeedbackMode ? (
+        <>
           <FeedbackPanel />
-          <button onClick={proceedToNextScenario}>Continue</button>
-        ELSE:
-          IF !selectedRole:
+          <button 
+            onClick={proceedToNextScenario} 
+            style={{ marginTop: '20px', padding: '10px 20px', fontSize: '1.1em' }}
+          >
+            Continue
+          </button>
+        </>
+      ) : (
+        <>
+          {!selectedRole ? (
             <RoleSelection />
-          ELSE:
+          ) : (
             <ChoiceList />
-      */}
-      <p style={{marginTop: '20px', fontStyle: 'italic'}}>
-        (Scenario Display, Role Selection / Choices, and Feedback Panel will appear here)
-      </p>
+          )}
+        </>
+      )}
     </div>
   );
 };
