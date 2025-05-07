@@ -1,0 +1,97 @@
+{
+  "gameTitle": "Dual Perspectives: A Product & Project Management Case Study Game",
+  "caseStudies": [
+    {
+      "id": "case001",
+      "title": "Smart Schedule Feature for 'Productivity Pro' App",
+      "description": "Your team is tasked with developing a new 'Smart Schedule' feature for the existing 'Productivity Pro' mobile app. This feature aims to automatically suggest optimal times for tasks based on user priorities, deadlines, and existing calendar events. The goal is to increase user engagement and reduce scheduling friction.",
+      "initialInfo": {
+        "projectGoals": ["Increase Daily Active Users (DAU) by 10% within 3 months post-launch.", "Achieve a 4-star or higher rating for the new feature in app stores."],
+        "targetUsers": [
+          { "persona": "Busy Professional", "needs": "Efficient time management, seamless integration with existing calendar, minimize scheduling conflicts, proactive suggestions." },
+          { "persona": "University Student", "needs": "Balance coursework, part-time job, and social life; reminders for deadlines; flexibility to reschedule." }
+        ],
+        "constraints": {
+          "budget": 150000,
+          "currency": "USD",
+          "timelineMonths": 6,
+          "teamSize": 5,
+          "teamSkills": ["Mobile Frontend (React Native)", "Backend (Node.js/Python)", "UX/UI Design", "QA Engineer"]
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sc001",
+          "projectPhase": "Initiation/Planning",
+          "title": "The High-Profile Feature Request",
+          "description": "During an initial stakeholder alignment meeting, the VP of Marketing, a key influencer, passionately requests adding a 'Social Challenge' component to the Smart Schedule. Users could share their scheduling achievements and challenge friends. This was NOT in the initial brief.",
+          "defaultNextScenarioId": "sc002_default_followup",
+          "choices": {
+            "ProductManager": [
+              {
+                "id": "sc001_prod_opt1",
+                "text": "Acknowledge VP's enthusiasm. State you'll evaluate the 'Social Challenge' idea against the core product vision, user needs for an MVP, and its potential impact on the roadmap. Promise to report back after initial research.",
+                "immediateConsequences": "VP feels heard. Decision on 'Social Challenge' deferred. Team has breathing room to assess. Adds research task to product backlog.",
+                "longTermImpacts": "Maintains strategic focus for MVP. Buys time for proper validation. Risk of VP feeling sidelined if not handled carefully or if idea is later rejected.",
+                "learningInsight": "Product Managers prioritize understanding the 'Why'—aligning features with product vision and user value. They manage stakeholder expectations while protecting the product strategy.",
+                "effects": { "stakeholderSatisfaction_VP": 5, "teamMorale": 2, "scopeRisk": 3 },
+                "nextScenarioId": "sc002_prod_followup"
+              },
+              {
+                "id": "sc001_prod_opt2",
+                "text": "Immediately agree to explore the 'Social Challenge' feature and ask the team to start high-level technical feasibility checks for it.",
+                "immediateConsequences": "VP is pleased. Development team potentially diverted to explore a new, large feature. Initial planning for core Smart Schedule might be disrupted.",
+                "longTermImpacts": "Risk of scope creep early on. May dilute MVP focus and impact timeline/budget. Potential for a popular feature if validated, but high risk without initial research.",
+                "learningInsight": "While responsiveness is good, Product Managers must guard against premature commitments that derail strategy without validating user value and feasibility.",
+                "effects": { "stakeholderSatisfaction_VP": 10, "teamMorale": -5, "scopeRisk": 8, "timelineImpactPoints": 2 },
+                "nextScenarioId": "sc002_scope_issue"
+              },
+              {
+                "id": "sc001_prod_opt3",
+                "text": "Politely but firmly state that the 'Social Challenge' is out of scope for the current MVP, which is focused on core scheduling. Offer to add it to a long-term idea backlog.",
+                "immediateConsequences": "Clear boundary set for MVP. VP may be disappointed or feel dismissed. Team maintains focus on original scope.",
+                "longTermImpacts": "Protects MVP timeline and budget. Risk of damaging relationship with influential stakeholder. Missed opportunity if 'Social Challenge' had high potential.",
+                "learningInsight": "Product Managers sometimes need to say 'no' or 'not now' to protect the product's core value proposition and roadmap, even to influential stakeholders.",
+                "effects": { "stakeholderSatisfaction_VP": -8, "teamMorale": 5, "scopeRisk": 1 },
+                "nextScenarioId": "sc002_vp_unhappy"
+              }
+            ],
+            "ProjectManager": [
+              {
+                "id": "sc001_proj_opt1",
+                "text": "Acknowledge the request. State you'll immediately initiate a change request process to formally document and assess the 'Social Challenge' feature's impact on scope, timeline, budget, and resources.",
+                "immediateConsequences": "VP sees a process is being followed. Team has a structured way to evaluate. Adds administrative overhead for change management.",
+                "longTermImpacts": "Ensures structured evaluation of changes. Manages stakeholder expectations through process. Can be perceived as bureaucratic if process is too heavy.",
+                "learningInsight": "Project Managers focus on the 'How'—managing scope, resources, and risks. Change control is a key tool to maintain project stability.",
+                "effects": { "stakeholderSatisfaction_VP": 3, "projectControl": 5, "timelineImpactPoints": 1 },
+                "nextScenarioId": "sc002_change_process"
+              },
+              {
+                "id": "sc001_proj_opt2",
+                "text": "Ask the development team leads for a quick, informal estimate of effort for the 'Social Challenge' to give the VP a rough idea of its size before formal assessment.",
+                "immediateConsequences": "VP gets a fast, rough estimate. Dev leads might be put on the spot or distracted. Estimate may be inaccurate and set wrong expectations.",
+                "longTermImpacts": "Can lead to decisions based on incomplete data. May build pressure on the team if the rough estimate is too optimistic. Undermines formal estimation processes.",
+                "learningInsight": "Project Managers strive for accurate planning. While quick answers can be tempting, they can introduce risk if not managed carefully.",
+                "effects": { "stakeholderSatisfaction_VP": 6, "teamMorale": -3, "accuracyRisk": 7 },
+                "nextScenarioId": "sc002_rough_estimate"
+              },
+              {
+                "id": "sc001_proj_opt3",
+                "text": "Remind the VP of the agreed-upon MVP scope and gently suggest discussing new features like 'Social Challenge' after the initial version is launched and user feedback is gathered.",
+                "immediateConsequences": "Reinforces current scope agreement. VP might feel their idea is being dismissed too early. Protects team from immediate distraction.",
+                "longTermImpacts": "Maintains project focus and discipline. Could strain relationship with VP if they feel unheard. Postpones potential value or risk.",
+                "learningInsight": "Project Managers are responsible for delivering the agreed scope on time and budget. They often defend the project plan against unmanaged scope expansion.",
+                "effects": { "stakeholderSatisfaction_VP": -5, "projectControl": 7, "teamMorale": 3 },
+                "nextScenarioId": "sc002_defend_scope"
+              }
+            ]
+          },
+          "alternativePerspective": {
+            "ProductManager": "While you focused on strategic fit and user value, a Project Manager would immediately think about the impact on timeline, resources, and the change management process for this new request.",
+            "ProjectManager": "While you focused on process and impact assessment, a Product Manager would first deeply evaluate if this 'Social Challenge' aligns with the product vision and truly solves a user problem before considering its implementation."
+          }
+        }
+      ]
+    }
+  ]
+} 
