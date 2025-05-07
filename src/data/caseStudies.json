@@ -148,61 +148,160 @@
           "id": "sc002_scope_issue",
           "projectPhase": "Planning",
           "title": "Dealing with Early Scope Creep",
-          "description": "You agreed to explore the VP of Marketing's 'Social Challenge' feature. The dev team's initial high-level check suggests it's a significant piece of work, potentially adding 4-6 weeks to the MVP timeline. The VP is pushing to include it.",
+          "description": "You agreed to explore the VP of Marketing's 'Social Challenge' feature. The dev team's initial high-level check suggests it's a significant piece of work, potentially adding 4-6 weeks to the MVP timeline. The VP is pushing hard to include it, citing its 'viral potential'.",
           "defaultNextScenarioId": "sc003_hard_choices",
           "choices": {
             "ProductManager": [
               {
                 "id": "sc002si_prod_opt1",
-                "text": "[PM Choice 1 for Scope Issue]",
-                "immediateConsequences": "...",
-                "longTermImpacts": "...",
-                "learningInsight": "...",
-                "effects": {},
-                "nextScenarioId": "sc003_..."
+                "text": "Reiterate the MVP strategy: focus on core value first. Propose a phased approach: launch core Smart Schedule, then immediately start a dedicated 'Social Challenge V1' discovery sprint if post-launch metrics are positive.",
+                "immediateConsequences": "VP may be partially placated by future commitment but still unhappy about MVP exclusion. Team maintains focus for now. Risk of future pressure if metrics are ambiguous.",
+                "longTermImpacts": "Protects initial MVP timeline. Defers 'Social Challenge' cost and risk. Requires clear criteria for triggering the V1 discovery. Keeps strategic options open.",
+                "learningInsight": "Product Managers often use phased rollouts or time-boxed discovery for new, large features to manage risk and validate assumptions without derailing core objectives.",
+                "effects": { "stakeholderSatisfaction_VP": -3, "teamMorale": 2, "scopeRisk": 2, "projectControl": 3 },
+                "nextScenarioId": "sc003_phased_approach_discussion"
+              },
+              {
+                "id": "sc002si_prod_opt2",
+                "text": "Negotiate with the VP: What's the absolute barebones MVP of 'Social Challenge' they'd accept for initial launch? Try to drastically simplify it to minimize timeline impact, even if it means cutting some core MVP features.",
+                "immediateConsequences": "Opens a difficult negotiation. Might find a compromise, or might lead to a watered-down product overall. Team may be frustrated by shifting priorities and potential feature cuts.",
+                "longTermImpacts": "Risk of launching a weak MVP for both core and social features. If successful, could be a win. If failed, hard to recover. High stakes.",
+                "learningInsight": "Product Managers sometimes have to make tough trade-offs. Descoping one feature to fit another requires careful consideration of user value and strategic impact.",
+                "effects": { "stakeholderSatisfaction_VP": 2, "teamMorale": -4, "scopeRisk": 7, "timelineImpactPoints": 1 },
+                "nextScenarioId": "sc003_negotiation_outcome"
               }
             ],
             "ProjectManager": [
               {
                 "id": "sc002si_proj_opt1",
-                "text": "[PjM Choice 1 for Scope Issue - e.g., Present formal impact assessment and request descoping other features or timeline extension]",
-                "immediateConsequences": "VP and stakeholders confronted with hard trade-offs. Project plan needs significant revision if feature is approved.",
-                "longTermImpacts": "Maintains project discipline by forcing explicit decisions on scope, time, and cost. Can lead to tense discussions.",
-                "learningInsight": "Project Managers use impact assessments and change control to manage scope creep, ensuring all stakeholders understand the consequences of new additions.",
-                "effects": { "projectControl": 7, "stakeholderSatisfaction_VP": -4, "timelineImpactPoints": 0},
-                "nextScenarioId": "sc003_scope_negotiation"
+                "text": "Present a formal impact assessment to all stakeholders: detail the 4-6 week delay, resource needs, and risks. Clearly state that including 'Social Challenge' requires either a timeline extension or descoping existing features. Request a formal decision.",
+                "immediateConsequences": "VP and stakeholders confronted with hard trade-offs via documented evidence. Project plan needs significant revision if feature is approved. Facilitates a clear decision.",
+                "longTermImpacts": "Maintains project discipline by forcing explicit decisions on scope, time, and cost. Can lead to tense discussions but clarifies accountability.",
+                "learningInsight": "Project Managers use impact assessments and formal change control to manage scope creep, ensuring all stakeholders understand the consequences of new additions.",
+                "effects": { "projectControl": 7, "stakeholderSatisfaction_VP": -4, "timelineImpactPoints": 0 },
+                "nextScenarioId": "sc003_formal_decision_meeting"
               },
               {
                 "id": "sc002si_proj_opt2",
-                "text": "[PjM Choice 2 for Scope Issue - e.g., Try to negotiate a drastically simplified version of Social Challenge]",
-                "immediateConsequences": "...",
-                "longTermImpacts": "...",
-                "learningInsight": "...",
-                "effects": {},
-                "nextScenarioId": "sc003_..."
+                "text": "Work with the tech lead to find any possible way to 'time-box' a very minimal version of the 'Social Challenge' (e.g., 1-2 weeks max effort). Present this as the *only* option if it absolutely must be in the MVP, highlighting what *won't* be included from the VP's vision.",
+                "immediateConsequences": "Shows proactivity in finding solutions. VP may reject the minimal version. Team might feel pressured to deliver a rushed, feature-poor component.",
+                "longTermImpacts": "If accepted, contains immediate scope explosion but might deliver little value. If rejected, strengthens case for deferral. Risk of technical debt if rushed.",
+                "learningInsight": "Project Managers often explore creative solutions to accommodate requests but must clearly communicate the trade-offs and limitations of such compromises.",
+                "effects": { "projectControl": 4, "teamMorale": -2, "scopeRisk": 5, "stakeholderSatisfaction_VP": 1 },
+                "nextScenarioId": "sc003_timebox_proposal_review"
               }
             ]
           },
           "alternativePerspective": {
-            "ProductManager": "...",
-            "ProjectManager": "..."
+            "ProductManager": "A Project Manager faced with this would immediately focus on the formal change request process and resource reallocation required, potentially escalating the risks to project sponsors.",
+            "ProjectManager": "A Product Manager would evaluate if the 'Social Challenge', even if it causes delays, offers enough strategic value or user acquisition potential to justify altering the MVP plans."
           }
         },
         {
           "id": "sc002_vp_unhappy",
           "projectPhase": "Planning",
           "title": "Managing a Disappointed Stakeholder",
-          "description": "You firmly declined the VP of Marketing's 'Social Challenge' for the MVP. While the team is focused, the VP seems disengaged and has made a few passive-aggressive comments in meetings.",
-          "defaultNextScenarioId": "sc003_relationship_repair",
-          "choices": { "ProductManager": [], "ProjectManager": [] }, "alternativePerspective": { "ProductManager": "", "ProjectManager": "" }
+          "description": "You firmly declined the VP of Marketing's 'Social Challenge' for the MVP to maintain focus. While the team is relieved, the VP seems disengaged in meetings and has made a few passive-aggressive comments about the project's 'lack of ambition'. This could undermine support.",
+          "defaultNextScenarioId": "sc003_relationship_repair_attempt",
+          "choices": {
+            "ProductManager": [
+              {
+                "id": "sc002vpu_prod_opt1",
+                "text": "Schedule a 1-on-1 with the VP. Reiterate your reasoning, acknowledge their disappointment, and proactively discuss how their marketing expertise *will* be crucial for the core MVP launch. Explore other ways to collaborate.",
+                "immediateConsequences": "Shows empathy and attempts to mend the relationship. VP might appreciate the gesture or remain skeptical. Opens dialogue for future collaboration.",
+                "longTermImpacts": "Can repair a key stakeholder relationship, crucial for long-term product success. If unsuccessful, the VP's disengagement might persist, impacting marketing support.",
+                "learningInsight": "Product Managers own stakeholder relationships. Addressing concerns directly, even after a tough 'no', is vital for maintaining trust and alignment.",
+                "effects": { "stakeholderSatisfaction_VP": 3, "teamMorale": 1, "projectControl": 1 },
+                "nextScenarioId": "sc003_vp_discussion_outcome"
+              },
+              {
+                "id": "sc002vpu_prod_opt2",
+                "text": "Focus on delivering an outstanding core MVP. Hope that its success will win back the VP's enthusiasm and demonstrate the wisdom of your focused approach.",
+                "immediateConsequences": "Team remains hyper-focused on delivery. VP's dissatisfaction is not directly addressed, potentially letting it fester.",
+                "longTermImpacts": "If MVP is a huge success, VP might come around. If MVP is just okay, or if marketing support is weak due to VP's disengagement, it could fail to meet goals.",
+                "learningInsight": "While product success is key, Product Managers can't always assume success alone will fix damaged stakeholder relationships. Proactive communication is often needed.",
+                "effects": { "stakeholderSatisfaction_VP": -2, "teamMorale": 0, "scopeRisk": -1 },
+                "nextScenarioId": "sc003_waiting_for_mvp_success"
+              }
+            ],
+            "ProjectManager": [
+              {
+                "id": "sc002vpu_proj_opt1",
+                "text": "Informally update your own manager (Project Sponsor) about the VP's behavior and potential risk to project support, suggesting they might have a peer-level conversation with the VP.",
+                "immediateConsequences": "Escalates the issue appropriately if it's impacting project climate. Your manager might intervene or advise you to handle it. Risk of appearing unable to manage stakeholders.",
+                "longTermImpacts": "Can bring higher-level attention to resolve the friction. If handled poorly, could worsen inter-departmental relations. Success depends on your manager's skill.",
+                "learningInsight": "Project Managers escalate risks that are beyond their direct control or that threaten project success. Knowing when and how to escalate is a key skill.",
+                "effects": { "projectControl": 2, "stakeholderSatisfaction_VP": -1 },
+                "nextScenarioId": "sc003_escalation_outcome"
+              },
+              {
+                "id": "sc002vpu_proj_opt2",
+                "text": "Double down on clear, consistent project communication to all stakeholders, including the VP. Ensure all successes and progress are well-documented and shared, hoping transparency and results speak for themselves.",
+                "immediateConsequences": "Reinforces professionalism and transparency. May subtly counter the VP's negativity with facts. VP might ignore it or see it as passive.",
+                "longTermImpacts": "Builds a record of project execution. May slowly rebuild trust if progress is strong. Won't directly address the VP's underlying disappointment.",
+                "learningInsight": "Project Managers rely on clear and consistent communication as a tool to manage expectations and showcase project health, even with difficult stakeholders.",
+                "effects": { "projectControl": 1, "teamMorale": 1 },
+                "nextScenarioId": "sc003_hoping_transparency_works"
+              }
+            ]
+          },
+          "alternativePerspective": {
+            "ProductManager": "A Project Manager, while noting the VP's behavior as a risk, might be more focused on ensuring this doesn't derail scheduled tasks or team morale directly.",
+            "ProjectManager": "A Product Manager would see the VP's disengagement as a direct threat to product adoption and market success, prioritizing mending that relationship or finding alternative champions."
+          }
         },
         {
           "id": "sc002_change_process",
           "projectPhase": "Planning",
           "title": "Navigating the Change Request",
-          "description": "The formal change request for the 'Social Challenge' has been initiated. The Change Advisory Board (CAB) meeting is next week. You need to prepare your input.",
-          "defaultNextScenarioId": "sc003_cab_meeting",
-          "choices": { "ProductManager": [], "ProjectManager": [] }, "alternativePerspective": { "ProductManager": "", "ProjectManager": "" }
+          "description": "The formal change request for the 'Social Challenge' feature has been initiated as per your process. The Change Advisory Board (CAB) meeting, where it will be reviewed, is scheduled for next week. You need to prepare your input and position.",
+          "defaultNextScenarioId": "sc003_cab_decision",
+          "choices": {
+            "ProductManager": [
+              {
+                "id": "sc002cp_prod_opt1",
+                "text": "Prepare a presentation for the CAB focusing on the 'Social Challenge's potential strategic value, user benefits (if validated), and market opportunity. Downplay the initial MVP disruption if you believe it's worth it.",
+                "immediateConsequences": "Presents a strong case for the feature. Risks being seen as biased if negative impacts are not adequately addressed. CAB may approve based on strategic pitch.",
+                "longTermImpacts": "If approved, you've championed a potentially valuable feature. If it fails or causes major issues, your credibility is on the line. If rejected, you've made your strategic case.",
+                "learningInsight": "Product Managers advocate for features they believe will deliver significant value, aligning them with business strategy, even through formal change processes.",
+                "effects": { "stakeholderSatisfaction_VP": 2, "scopeRisk": 3 },
+                "nextScenarioId": "sc003_cab_prod_presentation"
+              },
+              {
+                "id": "sc002cp_prod_opt2",
+                "text": "Prepare a neutral brief for the CAB: summarize the 'Social Challenge' idea, state that user research is pending/mixed, and defer to the Project Manager's impact assessment regarding timeline/cost. Focus on process adherence.",
+                "immediateConsequences": "Maintains neutrality. Puts onus on data and PM's assessment. CAB decision will be based more on facts than vision. VP might see this as unsupportive.",
+                "longTermImpacts": "Upholds process integrity. Decision will be data-driven. May miss opportunity to champion a feature if it had hidden potential that needed a visionary push.",
+                "learningInsight": "Product Managers provide crucial input to change processes, balancing strategic advocacy with objective data and respecting the assessment of execution impacts.",
+                "effects": { "projectControl": 2, "stakeholderSatisfaction_VP": -2 },
+                "nextScenarioId": "sc003_cab_neutral_briefing"
+              }
+            ],
+            "ProjectManager": [
+              {
+                "id": "sc002cp_proj_opt1",
+                "text": "Compile a thorough impact assessment for the CAB: detailed breakdown of additional time (4-6 weeks), resource costs, impact on other tasks, and any new risks. Present it objectively.",
+                "immediateConsequences": "CAB receives a clear, data-backed view of the change's implications. Decision will be well-informed from a project perspective. May make the feature seem too costly.",
+                "longTermImpacts": "Ensures CAB decisions are based on realistic project impacts. Protects project from uncosted scope creep. Upholds role as guardian of project constraints.",
+                "learningInsight": "Project Managers provide the factual basis for change decisions, focusing on the impact on timeline, budget, resources, and risk (the 'How').",
+                "effects": { "projectControl": 5, "timelineImpactPoints": 0 },
+                "nextScenarioId": "sc003_cab_proj_assessment"
+              },
+              {
+                "id": "sc002cp_proj_opt2",
+                "text": "In addition to the impact assessment, proactively suggest mitigation strategies if the CAB *were* to approve it (e.g., 'We could do X if feature Y is descoped, or if timeline is extended by Z weeks').",
+                "immediateConsequences": "Shows solution-oriented thinking. Helps CAB understand trade-offs more clearly. Risks appearing to endorse the change by offering solutions.",
+                "longTermImpacts": "Can lead to a more pragmatic approval if the change is desired. If rejected, you've still shown diligence. Reduces chaos if change is approved.",
+                "learningInsight": "Effective Project Managers not only assess impact but also explore and present options or mitigation plans for proposed changes.",
+                "effects": { "projectControl": 6, "teamMorale": 1 },
+                "nextScenarioId": "sc003_cab_proj_mitigation_plan"
+              }
+            ]
+          },
+          "alternativePerspective": {
+            "ProductManager": "A Project Manager would meticulously prepare the cost, schedule, and resource impact details for the CAB, ensuring all procedural steps are followed.",
+            "ProjectManager": "A Product Manager would focus on articulating the strategic rationale or user value proposition of the 'Social Challenge' to the CAB, trying to secure its approval if deemed valuable."
+          }
         },
         {
           "id": "sc002_rough_estimate",
@@ -251,8 +350,8 @@
             ]
           },
           "alternativePerspective": {
-            "ProductManager": "A Project Manager would be focused on task completion, risk identification, and schedule adherence during this check-in.",
-            "ProjectManager": "A Product Manager would use this check-in to reiterate the user value of upcoming tasks and ensure the team's work aligns with product goals."
+            "ProductManager": "If I were the Product Manager, I'd primarily focus on refining user stories and ensuring the team understands the acceptance criteria for the upcoming sprint.",
+            "ProjectManager": "As Project Manager, my main concern would be to update the risk register, track progress against the baseline, and ensure resource allocation is still optimal."
           }
         }
       ]
