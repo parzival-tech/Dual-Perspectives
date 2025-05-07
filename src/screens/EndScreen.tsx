@@ -1,13 +1,19 @@
 import React from 'react';
+import { useGameStore } from '../store/gameStore';
 
 const EndScreen: React.FC = () => {
-  return (
-    <div>
-      <h1>Case Study Ended</h1>
-      <p>This path has concluded, or the case study is complete.</p>
-      {/* Display final stats, insights, or options to restart/select new case study */}
-    </div>
-  );
+    const resetGame = useGameStore((state) => state.resetGame);
+    const error = useGameStore((state) => state.error); // To show why we ended up here if it's an error
+
+    return (
+        <div>
+            <h2>End of Current Path</h2>
+            {error && <p style={{color: 'orange'}}>Message: {error}</p>}
+            <p>You have reached the end of this scenario sequence.</p>
+            <p>In a full game, this screen would show a summary of your decisions and their impact, or offer to play other case studies.</p>
+            <button onClick={() => resetGame()}>Play Again / Select Another Case Study</button>
+        </div>
+    );
 };
 
 export default EndScreen; 

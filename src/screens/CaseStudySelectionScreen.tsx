@@ -1,11 +1,25 @@
 import React from 'react';
+import { useGameStore } from '../store/gameStore';
+import type { CaseStudy } from '../types/gameTypes';
 
 const CaseStudySelectionScreen: React.FC = () => {
+  const gameData = useGameStore((state) => state.gameData);
+  const startGame = useGameStore((state) => state.startGame);
+
+  if (!gameData || !gameData.caseStudies) {
+    return <div>Loading case studies...</div>;
+  }
+
   return (
     <div>
-      <h1>Select a Case Study</h1>
-      {/* Logic to list and select case studies will go here */}
-      <p>Case study list placeholder...</p>
+      <h2>Select a Case Study</h2>
+      {gameData.caseStudies.map((cs: CaseStudy) => (
+        <div key={cs.id} style={{ margin: '10px', padding: '10px', border: '1px solid #ccc' }}>
+          <h3>{cs.title}</h3>
+          <p>{cs.description.substring(0, 150)}...</p>
+          <button onClick={() => startGame(cs.id)}>Start Case: {cs.title}</button>
+        </div>
+      ))}
     </div>
   );
 };
