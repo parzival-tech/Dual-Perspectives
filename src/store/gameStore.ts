@@ -150,13 +150,15 @@ export const useGameStore = create<GameState>()(
           if (chosenOption.effects) {
             for (const key in chosenOption.effects) {
               const effectValue = chosenOption.effects[key];
+              const numericEffectValue = effectValue || 0;
+
               if (key in state.playerProgress.projectHealth) {
                 (state.playerProgress.projectHealth as any)[key] =
-                  ((state.playerProgress.projectHealth as any)[key] || 0) + effectValue;
+                  ((state.playerProgress.projectHealth as any)[key] || 0) + numericEffectValue;
               } else if (key.startsWith('stakeholderSatisfaction_')) {
                   const stakeholderKey = key.replace('stakeholderSatisfaction_', '');
                   state.playerProgress.projectHealth.stakeholderSatisfaction[stakeholderKey] =
-                    (state.playerProgress.projectHealth.stakeholderSatisfaction[stakeholderKey] || 50) + effectValue;
+                    (state.playerProgress.projectHealth.stakeholderSatisfaction[stakeholderKey] || 50) + numericEffectValue;
                   state.playerProgress.projectHealth.stakeholderSatisfaction[stakeholderKey] = Math.max(0, Math.min(100, state.playerProgress.projectHealth.stakeholderSatisfaction[stakeholderKey]));
               }
             }

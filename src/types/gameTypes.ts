@@ -1,7 +1,7 @@
 // --- Type Definitions for Dual Perspectives Game ---
 
 export interface EffectValues {
-  [key: string]: number; // e.g., stakeholderSatisfaction_VP: 5, budget: -1000, timelineImpactPoints: 1
+  [key: string]: number | undefined; // Allow undefined for optional effects
 }
 
 export interface Choice {
