@@ -1,0 +1,58 @@
+/* src/components/RoleSelection.module.css */
+.container {
+  padding: var(--spacing-lg, 20px);
+  margin: var(--spacing-xl, 30px) 0;
+  text-align: center;
+  background-color: var(--container-background, #fff); /* Could be transparent if preferred */
+  border-radius: var(--border-radius-cards, 12px);
+  border: 1px solid var(--border-color-soft, #e5e5e5); /* Soft border */
+  /* box-shadow: var(--shadow-light); /* Optional: if it needs to pop a bit */
+}
+
+.prompt {
+  font-size: 1.2em; /* Or use h3/h4 global styles from App.css */
+  font-weight: 600;
+  color: var(--text-color, #1d1d1f);
+  margin-bottom: var(--spacing-lg, 20px);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md, 16px);
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Base for role buttons, inherits from global button but we can override */
+.roleButton {
+  padding: 12px 28px; /* Slightly more padding */
+  font-size: 1.05em;
+  font-weight: 500;
+  border-radius: var(--border-radius-cards, 12px);
+  border: none;
+  color: #fff; /* Default white text */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.15s ease-out;
+  min-width: 200px; /* Give them some presence */
+}
+
+.roleButton:hover {
+  transform: translateY(-2px); /* Subtle lift */
+}
+.roleButton:active {
+  transform: translateY(-2px) scale(0.97); /* Press effect */
+}
+
+.productManagerButton {
+  background-color: var(--primary-color); /* Apple Blue */
+}
+.productManagerButton:hover {
+  background-color: var(--primary-color-hover); /* Darker Apple Blue */
+}
+
+.projectManagerButton {
+  background-color: #40C0CB; /* Calm Teal */
+}
+.projectManagerButton:hover {
+  background-color: #30AAB4; /* Darker Teal */
+} 

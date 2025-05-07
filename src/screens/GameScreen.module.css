@@ -1,0 +1,30 @@
+/* src/screens/GameScreen.module.css */
+.gameScreenContainer {
+  background-color: var(--container-background, #fff); /* White background for the game area */
+  padding: var(--spacing-lg, 20px); /* Padding around the entire game area */
+  /* If .app-container still has max-width, this component might need to override it or be structured outside it in App.tsx for full-width */
+  /* For now, assuming it fills its parent from App.css */
+  border-radius: var(--border-radius-container, 18px); /* Optional: if GameScreen itself should have rounded corners */
+  /* box-shadow: var(--shadow-container); /* Optional: if GameScreen itself should have a shadow */
+}
+
+.gameLayout {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr; /* Approx 1:2.5 ratio, adjust as needed. 1fr 3fr might be closer to reference */
+  gap: var(--spacing-xl, 30px);
+  align-items: flex-start; /* Align items to the top of their grid cell */
+}
+
+.leftPanel {
+  /* Stats Panel */
+  /* background-color: #f0f0f0; /* Optional distinct background for panel debugging */
+  padding-right: var(--spacing-lg, 20px); /* Space between panel and potential border/edge */
+  /* border-right: 1px solid var(--border-color-soft, #e5e5e5); /* Optional separator */
+}
+
+.rightPanel {
+  /* Interaction Panel */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 20px); /* Space between items in the right panel */
+} 

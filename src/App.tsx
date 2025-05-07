@@ -1,71 +1,76 @@
 import { useEffect } from 'react';
-import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { useGameStore, selectIsGameStarted, selectIsGameActive } from './store/gameStore';
-import gameDataJson from './data/caseStudies.json'; // Import the JSON data directly
-import type { GameData } from './types/gameTypes'; // Import the GameData type
+import gameDataJson from './data/caseStudies.json';
+import type { GameData } from './types/gameTypes';
+import { motion, AnimatePresence } from 'framer-motion'; // Import Framer Motion
 
-// Using explicit paths to try and resolve linter issue
 import CaseStudySelectionScreen from './screens/CaseStudySelectionScreen';
-import GameScreen from './screens/GameScreen'; // This one wasn't erroring, keep relative
+import GameScreen from './screens/GameScreen';
 import EndScreen from './screens/EndScreen';
 
-import './App.css'; // You can keep or remove default App.css styling
+import './App.css';
+
+// Animation variants for screen transitions
+const screenVariants = {
+  initial: { opacity: 0, x: -50 },
+  animate: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+  exit: { opacity: 0, x: 50, transition: { duration: 0.3, ease: "easeInOut" } },
+};
 
 function App() {
   const loadGameData = useGameStore((state) => state.loadGameData);
   const isGameStarted = useGameStore(selectIsGameStarted);
-  const isGameActive = useGameStore(selectIsGameActive); // Game is active if a scenario is loaded
-  const currentScenarioId = useGameStore((state) => state.currentScenarioId); // Using direct state for dependency array
-  const isLoading = useGameStore((state) => state.isLoading);
+  const isGameActive = useGameStore(selectIsGameActive);
   const error = useGameStore((state) => state.error);
-
-  const navigate = useNavigate();
-  const location = useLocation();
+  const gameTitle = useGameStore((state) => state.gameData?.gameTitle); // Get title from store
 
   useEffect(() => {
-    // Type assertion for the imported JSON
     loadGameData(gameDataJson as GameData);
   }, [loadGameData]);
 
-  useEffect(() => {
-    if (isLoading) return; // Don't navigate while loading
-
-    const currentPath = location.pathname;
-
-    if (!isGameStarted) {
-      if (currentPath !== '/') navigate('/');
-    } else {
-      if (isGameActive) {
-        if (currentPath !== '/game') navigate('/game');
-      } else {
-        // Game started, but not active (implies end of path or an error state)
-        if (currentPath !== '/end') navigate('/end');
-      }
-    }
-  }, [isGameStarted, isGameActive, currentScenarioId, isLoading, location.pathname, navigate]);
-
-  if (isLoading) {
-    return <div>Loading game data...</div>;
+  if (useGameStore((state) => state.isLoading)) {
+    return <div style={{ textAlign: 'center', padding: '50px', fontSize: '18px' }}>Loading game data...</div>;
   }
 
-  // Main game flow rendering
+  if (error && !isGameActive) {
+    return <div style={{ color: 'red', padding: '20px', textAlign: 'center' }}>Critical Error: {error} <br /> Please check console.</div>;
+  }
+  
+  let screenKey = "selection";
+  let CurrentScreenComponent = CaseStudySelectionScreen;
+
+  if (isGameStarted) {
+    if (isGameActive) {
+      screenKey = "game";
+      CurrentScreenComponent = GameScreen;
+    } else {
+      screenKey = "end";
+      CurrentScreenComponent = EndScreen;
+    }
+  }
+
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>{gameDataJson.gameTitle || "Dual Perspectives"}</h1>
+        <h1>{gameTitle || "Dual Perspectives"}</h1>
       </header>
       <main className="app-main">
-        <Routes>
-          <Route path="/" element={<CaseStudySelectionScreen />} />
-          <Route path="/game" element={<GameScreen />} />
-          <Route path="/end" element={<EndScreen />} />
-          {/* Optionally, add a catch-all route for 404 or redirect to '/' */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <AnimatePresence mode="wait"> {/* mode="wait" ensures one screen exits before next enters */}
+          <motion.div
+            key={screenKey} // Important for AnimatePresence to detect changes
+            className="screen-section"
+            variants={screenVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <CurrentScreenComponent />
+          </motion.div>
+        </AnimatePresence>
       </main>
       <footer className="app-footer">
         <p>An Interactive Case Study Game</p>
-        {error && <p style={{color: 'orange'}}>Notice: {error}</p>}
+        {error && isGameActive && <p style={{color: 'orange'}}>Notice: {error}</p>}
       </footer>
     </div>
   );

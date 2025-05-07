@@ -1,63 +1,211 @@
 /* src/App.css */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+
+/* CSS Variables for consistent theming */
+:root {
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --text-color: #1d1d1f; /* Standard Apple text color */
+  --text-color-secondary: #6e6e73; /* Secondary text color */
+  --primary-color: #007aff; /* Apple blue */
+  --primary-color-hover: #005ecb;
+  --container-background: #ffffff;
+  --border-color-soft: #e5e5e5; /* For lighter borders like headers/footers */
+  --border-color-card: #e0e0e0; /* For card borders */
+  --border-radius-cards: 12px; /* For cards and buttons specified by user */
+  --border-radius-container: 18px; /* For the main app container */
+  --shadow-container: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.05);
+
+  --font-size-base: 16px;
+  --line-height-base: 1.6; /* Consistent with index.css */
+
+  --spacing-sm: 8px;
+  --spacing-md: 15px; /* Consistent with user's p margin-bottom */
+  --spacing-lg: 20px; /* Consistent with user's h2 margin-bottom, card padding etc. */
+  --spacing-xl: 30px; /* Consistent with user's app-header margin-bottom */
+  --spacing-xxl: 40px; /* Consistent with user's app-container margin */
 }
 
+/* Minimal Reset (box-sizing is in index.css) */
+body, h1, h2, h3, h4, p, button, figure, blockquote, dl, dd {
+  margin: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+
+/* Body styles are primarily in index.css. App.css uses some root vars that might be referenced by body if needed */
+/* Actual body tag styling is in index.css */
+
 .app-container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  max-width: 800px;
+  margin: var(--spacing-xxl) auto;
+  padding: var(--spacing-xl) var(--spacing-xxl);
+  background-color: var(--container-background);
+  box-shadow: var(--shadow-container);
+  border-radius: var(--border-radius-container);
+  overflow: hidden;
 }
 
 .app-header {
   text-align: center;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color-soft);
 }
 
 .app-header h1 {
   margin: 0;
-  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 .app-main {
-  min-height: 300px; /* Give some space for content */
+  min-height: 350px;
 }
 
 .app-footer {
   text-align: center;
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
-  font-size: 0.9em;
-  color: #777;
+  margin-top: var(--spacing-xxl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color-soft);
+  font-size: 0.85em;
+  color: var(--text-color-secondary);
 }
 
-button {
-  background-color: #007bff;
+/* General Button Styling - More Apple-like */
+button.primary-button,
+.choice-button { /* .choice-button for specificity if needed later */
+  background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  margin: var(--spacing-sm) 5px;
+  border-radius: var(--border-radius-cards); /* Consistent with cards */
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: var(--font-family-sans); /* Ensure buttons use the main font */
   cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-button:hover {
-  background-color: #0056b3;
+button.primary-button:hover,
+.choice-button:hover {
+  background-color: var(--primary-color-hover);
 }
 
-button:disabled {
-  background-color: #ccc;
+button.primary-button:active,
+.choice-button:active {
+  transform: scale(0.98);
+}
+
+button.primary-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+}
+
+button.secondary-button {
+  background-color: #e9e9eb;
+  color: var(--text-color);
+  border: none;
+  padding: 12px 24px;
+  margin: var(--spacing-sm) 5px;
+  border-radius: var(--border-radius-cards);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: var(--font-family-sans);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button.secondary-button:hover {
+  background-color: #dcdce0;
+}
+
+button.secondary-button:active {
+  transform: scale(0.98);
+}
+
+button.secondary-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15); /* Subtle focus for secondary */
+}
+
+
+button:disabled { /* Applies to any button element if disabled */
+  background-color: #d1d1d6;
+  color: #8e8e93;
   cursor: not-allowed;
+  transform: none;
+}
+
+/* Utility class for screen transitions */
+.screen-section {
+  padding: var(--spacing-lg) 0;
+}
+
+/* Typography - Using variables and user specifics */
+h1 { /* .app-header h1 is more specific for the main title */
+  font-size: 2.25em; /* From previous global styles, adjust if needed */
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-color);
+  line-height: 1.3;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+p {
+  color: #333333;
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-base);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Card-like style for scenario elements */
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color-card);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-cards);
+  box-shadow: var(--shadow-card);
 }

@@ -1,0 +1,59 @@
+/* src/components/ProjectHealthDisplay.module.css */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); /* Reduced min width */
+  gap: var(--spacing-md, 16px); /* Reduced gap */
+  padding: var(--spacing-md, 16px) 0;
+}
+
+.metricCard {
+  background-color: var(--container-background, #fff);
+  padding: var(--spacing-md, 16px); /* Reduced padding */
+  border-radius: var(--border-radius-cards, 12px); /* Use variable */
+  box-shadow: var(--shadow-card, 0 2px 8px rgba(0,0,0,0.05)); /* Use variable */
+  border: 1px solid var(--border-color-card, #e0e0e0); /* Use variable */
+}
+
+.metricCard h5 { /* Metric Name */
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--text-color-secondary, #6e6e73);
+  margin-bottom: var(--spacing-sm, 8px);
+  text-transform: uppercase; /* Like the reference */
+}
+
+.metricValue { /* Metric Value */
+  font-size: 1.5em; /* Reduced font size */
+  font-weight: 600;
+  color: var(--text-color, #1d1d1f);
+  margin-bottom: var(--spacing-xs, 4px);
+}
+
+.metricDetail { /* For supplemental info like "+20% from last month" */
+  font-size: 0.85em;
+  color: var(--text-color-secondary, #6e6e73);
+}
+
+/* Styles for progress bars (simple version) */
+.progressBarContainer {
+  background-color: #e9e9eb; /* Light gray track */
+  border-radius: var(--border-radius-standard, 8px);
+  height: 10px;
+  margin-top: var(--spacing-sm, 8px);
+  overflow: hidden;
+}
+
+.progressBarFill {
+  background-color: var(--primary-color, #007aff); /* Blue fill */
+  height: 100%;
+  border-radius: var(--border-radius-standard, 8px) 0 0 var(--border-radius-standard, 8px); /* Keep left rounding */
+  transition: width 0.5s ease-in-out;
+}
+
+/* Specific styling for risk (lower is better) - maybe red if high */
+.scopeRiskValue.highRisk {
+  color: #ff3b30; /* Apple red for alerts */
+}
+.scopeRiskValue.mediumRisk {
+  color: #ff9500; /* Apple orange for warnings */
+} 

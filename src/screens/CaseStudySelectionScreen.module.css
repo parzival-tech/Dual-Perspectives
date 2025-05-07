@@ -1,0 +1,47 @@
+/* dual-perspectives/src/screens/CaseStudySelectionScreen.module.css */
+.screenContainer {
+  padding: var(--spacing-md) 0; /* Add some vertical padding */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl); /* More space below title */
+}
+
+.caseStudyItem {
+  background-color: var(--container-background); /* Or var(--card-background) if you defined one, using --container-background for a subtle difference from body */
+  border: 1px solid var(--border-color-soft);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-cards);
+  box-shadow: var(--shadow-light); /* Using a lighter shadow for these items */
+  transition: box-shadow 0.2s ease-in-out;
+  text-align: center; /* Center text content within the card */
+}
+
+.caseStudyItem:hover {
+  box-shadow: var(--shadow-standard); /* Slightly more prominent shadow on hover */
+}
+
+.caseStudyTitle {
+  font-size: 1.4em; /* Adjust as needed */
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.caseStudyDescription {
+  color: var(--text-color-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95em;
+  line-height: 1.5;
+  /* max-width: 90%; /* Optional: constrain width for better centered readability */
+  /* margin-left: auto; /* Optional: accompany max-width for centering */
+  /* margin-right: auto; /* Optional: accompany max-width for centering */
+}
+
+.buttonContainer {
+  margin-top: var(--spacing-md);
+  display: flex; /* Use flexbox for better button centering */
+  justify-content: center; /* Center button horizontally */
+} 
