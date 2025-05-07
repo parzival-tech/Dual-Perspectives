@@ -1,0 +1,38 @@
+/* src/components/ChoiceList.module.css */
+.choiceListContainer {
+  margin-top: 25px;
+}
+
+.actingAs {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.prompt {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Uses global .choice-button from App.css, but you can add specifics */
+.choiceListContainer .choice-button { /* Target more specifically */
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 12px; /* More space between choice buttons */
+  padding: 14px 18px; /* Slightly larger padding */
+  background-color: #f8f8f8; /* Light background for choices */
+  color: #1d1d1f;
+  border: 1px solid #d1d1d6;
+}
+
+.choiceListContainer .choice-button:hover {
+  border-color: #007aff;
+  background-color: #eef6ff; /* Light blue tint on hover */
+}
+
+.noChoices {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+} 

@@ -23,6 +23,7 @@ function App() {
   const isGameActive = useGameStore(selectIsGameActive);
   const error = useGameStore((state) => state.error);
   const gameTitle = useGameStore((state) => state.gameData?.gameTitle); // Get title from store
+  const resetGame = useGameStore((state) => state.resetGame);
 
   useEffect(() => {
     loadGameData(gameDataJson as GameData);
@@ -32,7 +33,7 @@ function App() {
     return <div style={{ textAlign: 'center', padding: '50px', fontSize: '18px' }}>Loading game data...</div>;
   }
 
-  if (error && !isGameActive) {
+  if (error && !isGameActive && !isGameStarted) {
     return <div style={{ color: 'red', padding: '20px', textAlign: 'center' }}>Critical Error: {error} <br /> Please check console.</div>;
   }
   
@@ -70,8 +71,18 @@ function App() {
       </main>
       <footer className="app-footer">
         <p>An Interactive Case Study Game</p>
-        {error && isGameActive && <p style={{color: 'orange'}}>Notice: {error}</p>}
+        {error && (isGameActive || (isGameStarted && !isGameActive)) && <p style={{color: 'orange'}}>Notice: {error}</p>}
       </footer>
+
+      {isGameStarted && (
+        <button 
+          onClick={() => resetGame()}
+          className="restart-game-button"
+          title="Restart Game"
+        >
+          &#x21BB;
+        </button>
+      )}
     </div>
   );
 }

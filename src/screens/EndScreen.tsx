@@ -1,24 +1,23 @@
 import React from 'react';
 import { useGameStore } from '../store/gameStore';
-import { useNavigate } from 'react-router-dom';
+import styles from './EndScreen.module.css';
 
 const EndScreen: React.FC = () => {
     const resetGame = useGameStore((state) => state.resetGame);
-    const error = useGameStore((state) => state.error); // To show why we ended up here if it's an error
-    const navigate = useNavigate();
-
-    const handlePlayAgain = () => {
-        resetGame();
-        navigate('/');
-    };
+    const error = useGameStore((state) => state.error);
 
     return (
-        <div>
-            <h2>End of Current Path</h2>
-            {error && <p style={{color: 'orange'}}>Message: {error}</p>}
-            <p>You have reached the end of this scenario sequence.</p>
-            <p>In a full game, this screen would show a summary of your decisions and their impact, or offer to play other case studies.</p>
-            <button onClick={handlePlayAgain}>Play Again / Select Another Case Study</button>
+        <div className={styles.endScreenContainer}>
+            <h2>Path Completed</h2>
+            {error && <p className={styles.errorMessage}>Notice: {error}</p>}
+            <p>You've reached the end of this particular scenario sequence.</p>
+            <p className={styles.futureEnhancement}>
+                (In a future version, this screen could display a summary of your key decisions,
+                their cumulative impact on project health, and overall learning takeaways.)
+            </p>
+            <button className="primary-button" onClick={() => resetGame()}>
+                Play Another Case / Restart
+            </button>
         </div>
     );
 };

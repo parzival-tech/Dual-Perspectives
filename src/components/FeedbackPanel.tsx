@@ -1,8 +1,11 @@
 import React from 'react';
 import { useGameStore } from '../store/gameStore';
+import { motion } from 'framer-motion';
+import styles from './FeedbackPanel.module.css';
 
 const FeedbackPanel: React.FC = () => {
   const feedback = useGameStore((state) => state.currentFeedback);
+  const selectedRole = useGameStore((state) => state.selectedRole); // Get selected role
 
   if (!feedback || !feedback.choice) {
     return null; // Don't render if no feedback
@@ -11,22 +14,36 @@ const FeedbackPanel: React.FC = () => {
   const { choice, alternativePerspectiveText } = feedback;
 
   return (
-    <div style={{ marginTop: '20px', padding: '15px', border: '2px solid #4CAF50', borderRadius: '5px', backgroundColor: '#f0fff0' }}>
-      <h4>Decision Outcome:</h4>
-      <p><strong>Your Action ({useGameStore.getState().selectedRole}):</strong> {choice.text}</p>
+    <motion.div 
+      className={styles.feedbackPanelContainer}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }}
+    >
+      <h3 className={styles.title}>Decision Outcome</h3>
+      <div className={styles.section}>
+        <p><strong>Your Action ({selectedRole}):</strong> {choice.text}</p>
+      </div>
       
-      <h5>Immediate Consequences:</h5>
-      <p>{choice.immediateConsequences}</p>
+      <div className={styles.section}>
+        <h5 className={styles.subheading}>Immediate Consequences:</h5>
+        <p>{choice.immediateConsequences}</p>
+      </div>
 
-      <h5>Potential Longer-Term Impacts:</h5>
-      <p>{choice.longTermImpacts}</p>
+      <div className={styles.section}>
+        <h5 className={styles.subheading}>Potential Longer-Term Impacts:</h5>
+        <p>{choice.longTermImpacts}</p>
+      </div>
 
-      <h5>Role-Specific Insight:</h5>
-      <p>{choice.learningInsight}</p>
+      <div className={styles.section}>
+        <h5 className={styles.subheading}>Role-Specific Insight:</h5>
+        <p>{choice.learningInsight}</p>
+      </div>
 
-      <h5>Alternative Perspective:</h5>
-      <p><em>{alternativePerspectiveText}</em></p>
-    </div>
+      <div className={styles.section}>
+        <h5 className={styles.subheading}>Alternative Perspective:</h5>
+        <p><em>{alternativePerspectiveText}</em></p>
+      </div>
+    </motion.div>
   );
 };
 
