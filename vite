@@ -1,0 +1,422 @@
+
+
+  VITE v6.3.5  ready in 360 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+11:39:07 PM [vite] (client) hmr update /src/screens/GameScreen.tsx
+11:39:08 PM [vite] (client) hmr update /src/screens/GameScreen.tsx (x2)
+11:46:47 PM [vite] (client) hmr update /src/App.tsx
+11:46:51 PM [vite] (client) hmr update /src/App.tsx (x2)
+12:14:11 AM [vite] (client) hmr update /src/App.tsx (x3)
+12:25:22 AM [vite] (client) hmr update /src/App.tsx (x4)
+12:37:17 AM [vite] (client) hmr update /src/App.tsx (x5)
+12:37:17 AM [vite] (client) Pre-transform error: Failed to parse JSON f
+12:37:17 AM [vite] (client) Pre-transform error: Failed to parse JSON file, invalid JSON syntax found at position 45793
+  Plugin: vite:json
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/data/caseStudies.json:469:67
+  467|            "projectPhase": "Planning",
+  468|            "title": "The Unresolved Scope Dilemma",
+  469|            "description": "Despite initial discussions about the
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. Th
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating stro
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is 
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is looking for clear direction.",
+     |                                                                 
+     |                                                                    ^
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact",
+  471|            "choices": {
+12:37:17 AM [vite] Internal server error: Failed to parse JSON file, in
+12:37:17 AM [vite] Internal server error: Failed to parse JSON file, invalid JSON syntax found at position 45793
+  Plugin: vite:json
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/data/caseStudies.json:469:67
+  467|            "projectPhase": "Planning",
+  468|            "title": "The Unresolved Scope Dilemma",
+  469|            "description": "Despite initial discussions about the
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. Th
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating stro
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is 
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is looking for clear direction.",
+     |                                                                 
+     |                                                                    ^
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact",
+  471|            "choices": {
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/D
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vit
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Docume
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dis
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Docu
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/d
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:12175:16)
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroy
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42295:19)
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cu
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Docum
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/di
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+12:37:21 AM [vite] (client) hmr update /src/App.tsx
+12:37:21 AM [vite] (client) Pre-transform error: Failed to parse JSON f
+12:37:21 AM [vite] (client) Pre-transform error: Failed to parse JSON file, invalid JSON syntax found at position 45793
+  Plugin: vite:json
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/data/caseStudies.json:469:67
+  467|            "projectPhase": "Planning",
+  468|            "title": "The Unresolved Scope Dilemma",
+  469|            "description": "Despite initial discussions about the
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. Th
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating stro
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is 
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is looking for clear direction.",
+     |                                                                 
+     |                                                                    ^
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact",
+  471|            "choices": {
+12:37:21 AM [vite] Internal server error: Failed to parse JSON file, in
+12:37:21 AM [vite] Internal server error: Failed to parse JSON file, invalid JSON syntax found at position 45793
+  Plugin: vite:json
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/data/caseStudies.json:469:67
+  467|            "projectPhase": "Planning",
+  468|            "title": "The Unresolved Scope Dilemma",
+  469|            "description": "Despite initial discussions about the
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. Th
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating stro
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is 
+  469|            "description": "Despite initial discussions about the VP\'s \'Social Challenge\' feature, no firm decision has been made. The dev team estimates a 4-6 week impact, the VP is still advocating strongly, and pressure is mounting to finalize the MVP scope. Your team is looking for clear direction.",
+     |                                                                 
+     |                                                                    ^
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact
+  470|            "defaultNextScenarioId": "sc004_scope_decision_impact",
+  471|            "choices": {
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/D
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vit
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Docume
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dis
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Docu
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/d
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:12175:16)
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroy
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42295:19)
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cu
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Docum
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/di
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+12:38:22 AM [vite] (client) hmr update /src/App.tsx
+12:38:22 AM [vite] (client) Pre-transform error: Failed to parse JSON f
+12:38:22 AM [vite] (client) Pre-transform error: Failed to parse JSON file, invalid JSON syntax found at position 60146
+  Plugin: vite:json
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/data/caseStudies.json:605:83
+  603|                  "longTermImpacts": "Maintains project disciplin
+  603|                  "longTermImpacts": "Maintains project discipline despite scope changes. Helps manage risks associated with the new pla
+  603|                  "longTermImpacts": "Maintains project discipline despite scope changes. Helps manage risks associated with the new plan. If scope increased, timeline and budget are officially adjusted.",
+  604|                  "learningInsight": "Project Managers ensure tha
+  604|                  "learningInsight": "Project Managers ensure that even negotiated scope changes go through formal change control to upd
+  604|                  "learningInsight": "Project Managers ensure that even negotiated scope changes go through formal change control to update baselines and manage stakeholder expectations about impacts.",
+  605|                  "effects": { "projectControl": 7, "timelineImpa
+  605|                  "effects": { "projectControl": 7, "timelineImpactPoints": "VARIES" /*depends on outcome*/, "teamMorale": -2 },
+     |                                                                 
+     |                                                                                    ^
+  606|                  "nextScenarioId": "sc004_replan_after_negotiati
+  606|                  "nextScenarioId": "sc004_replan_after_negotiation"
+  607|                },
+12:38:22 AM [vite] Internal server error: Failed to parse JSON file, in
+12:38:22 AM [vite] Internal server error: Failed to parse JSON file, invalid JSON syntax found at position 60146
+  Plugin: vite:json
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/data/caseStudies.json:605:83
+  603|                  "longTermImpacts": "Maintains project disciplin
+  603|                  "longTermImpacts": "Maintains project discipline despite scope changes. Helps manage risks associated with the new pla
+  603|                  "longTermImpacts": "Maintains project discipline despite scope changes. Helps manage risks associated with the new plan. If scope increased, timeline and budget are officially adjusted.",
+  604|                  "learningInsight": "Project Managers ensure tha
+  604|                  "learningInsight": "Project Managers ensure that even negotiated scope changes go through formal change control to upd
+  604|                  "learningInsight": "Project Managers ensure that even negotiated scope changes go through formal change control to update baselines and manage stakeholder expectations about impacts.",
+  605|                  "effects": { "projectControl": 7, "timelineImpa
+  605|                  "effects": { "projectControl": 7, "timelineImpactPoints": "VARIES" /*depends on outcome*/, "teamMorale": -2 },
+     |                                                                 
+     |                                                                                    ^
+  606|                  "nextScenarioId": "sc004_replan_after_negotiati
+  606|                  "nextScenarioId": "sc004_replan_after_negotiation"
+  607|                },
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/D
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vit
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Docume
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dis
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Docu
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/d
+      at TransformPluginContext.handler (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:12175:16)
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroy
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/
+      at EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42295:19)
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cu
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Docum
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/di
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+12:39:30 AM [vite] (client) hmr update /src/App.tsx
+1:22:31 AM [vite] (client) hmr update /src/App.css
+1:29:57 AM [vite] (client) hmr update /src/index.css
+1:30:00 AM [vite] (client) hmr update /src/index.css (x2)
+1:30:19 AM [vite] (client) hmr update /src/App.css
+1:30:54 AM [vite] (client) hmr update /src/App.css (x2)
+1:31:46 AM [vite] (client) hmr update /src/App.css (x3)
+1:32:03 AM [vite] (client) hmr update /src/App.tsx
+1:32:03 AM [vite] (client) ✨ new dependencies optimized: framer-motion
+1:32:03 AM [vite] (client) ✨ optimized dependencies changed. reloading
+1:32:04 AM [vite] (client) hmr update /src/App.tsx
+1:42:36 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+1:42:36 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx
+1:44:09 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+1:44:09 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x2)
+1:44:23 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+1:44:23 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x3)
+1:48:47 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+1:48:47 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x4)
+1:48:47 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+1:48:47 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x5)
+1:49:24 AM [vite] (client) hmr update /src/components/ProjectHealthDisp
+1:49:24 AM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx
+1:57:47 AM [vite] (client) hmr update /src/components/ScenarioDisplay.t
+1:57:47 AM [vite] (client) hmr update /src/components/ScenarioDisplay.tsx
+1:58:36 AM [vite] (client) hmr update /src/components/RoleSelection.tsx
+1:58:37 AM [vite] (client) hmr update /src/components/RoleSelection.tsx
+1:58:37 AM [vite] (client) hmr update /src/components/RoleSelection.tsx (x2)
+2:08:05 AM [vite] (client) hmr update /src/screens/GameScreen.tsx
+2:08:18 AM [vite] (client) hmr update /src/components/RoleSelection.tsx
+2:11:01 AM [vite] (client) hmr update /src/components/ProjectHealthDisp
+2:11:01 AM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx
+2:16:25 AM [vite] (client) hmr update /src/components/ProjectHealthDisp
+2:16:25 AM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx (x2)
+2:16:29 AM [vite] (client) hmr update /src/components/ProjectHealthDisp
+2:16:29 AM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx (x3)
+2:16:31 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+2:16:31 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx
+2:16:42 AM [vite] (client) hmr update /src/components/ScenarioDisplay.t
+2:16:42 AM [vite] (client) hmr update /src/components/ScenarioDisplay.tsx
+2:17:18 AM [vite] (client) hmr update /src/components/ChoiceList.tsx
+2:18:57 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x
+2:18:57 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x2)
+2:19:01 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x
+2:19:01 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x3)
+2:19:08 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x
+2:19:08 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x4)
+2:19:08 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x
+2:19:08 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x5)
+2:19:09 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x
+2:19:09 AM [vite] (client) hmr update /src/components/ChoiceList.tsx (x6)
+2:19:19 AM [vite] (client) hmr update /src/components/FeedbackPanel.tsx
+2:19:19 AM [vite] Internal server error: Failed to resolve import "./Fe
+2:19:19 AM [vite] Internal server error: Failed to resolve import "./FeedbackPanel.module.css" from "src/components/FeedbackPanel.tsx". Does t
+2:19:19 AM [vite] Internal server error: Failed to resolve import "./FeedbackPanel.module.css" from "src/components/FeedbackPanel.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/components/FeedbackPanel.tsx:4:19
+  19 |  import { useGameStore } from "../store/gameStore";
+  20 |  import { motion } from "framer-motion";
+  21 |  import styles from "./FeedbackPanel.module.css";
+     |                      ^
+  22 |  const FeedbackPanel = () => {
+  23 |    _s();
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/D
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vit
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Docume
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dis
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Pro
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/de
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/Th
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXg
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///Users/jaranarr
+      at async TransformPluginContext.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_module
+      at async TransformPluginContext.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/jara
+      at async EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_mo
+      at async EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cu
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Docum
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/di
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+2:19:20 AM [vite] (client) hmr update /src/screens/GameScreen.tsx
+2:19:20 AM [vite] Internal server error: Failed to resolve import "./Fe
+2:19:20 AM [vite] Internal server error: Failed to resolve import "./FeedbackPanel.module.css" from "src/components/FeedbackPanel.tsx". Does t
+2:19:20 AM [vite] Internal server error: Failed to resolve import "./FeedbackPanel.module.css" from "src/components/FeedbackPanel.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/components/FeedbackPanel.tsx:4:19
+  19 |  import { useGameStore } from "../store/gameStore";
+  20 |  import { motion } from "framer-motion";
+  21 |  import styles from "./FeedbackPanel.module.css";
+     |                      ^
+  22 |  const FeedbackPanel = () => {
+  23 |    _s();
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/D
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vit
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Docume
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dis
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Pro
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/de
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/Th
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXg
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///Users/jaranarr
+      at async TransformPluginContext.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_module
+      at async TransformPluginContext.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/jara
+      at async EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_mo
+      at async EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cu
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+2:19:20 AM [vite] (client) Pre-transform error: Failed to resolve impor
+2:19:20 AM [vite] (client) Pre-transform error: Failed to resolve import "./FeedbackPanel.module.css" from "src/components/FeedbackPanel.tsx".
+2:19:20 AM [vite] (client) Pre-transform error: Failed to resolve import "./FeedbackPanel.module.css" from "src/components/FeedbackPanel.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/components/FeedbackPanel.tsx:4:19
+  19 |  import { useGameStore } from "../store/gameStore";
+  20 |  import { motion } from "framer-motion";
+  21 |  import styles from "./FeedbackPanel.module.css";
+     |                      ^
+  22 |  const FeedbackPanel = () => {
+  23 |    _s();
+2:19:26 AM [vite] (client) hmr update /src/screens/GameScreen.tsx
+2:19:28 AM [vite] (client) hmr update /src/components/FeedbackPanel.tsx
+2:19:36 AM [vite] (client) hmr update /src/screens/EndScreen.tsx
+2:19:36 AM [vite] Internal server error: Failed to resolve import "./En
+2:19:36 AM [vite] Internal server error: Failed to resolve import "./EndScreen.module.css" from "src/screens/EndScreen.tsx". Does the file exi
+2:19:36 AM [vite] Internal server error: Failed to resolve import "./EndScreen.module.css" from "src/screens/EndScreen.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-per
+  File: /Users/jaranarroyo/Documents/Cursor Projects/ThePMGame/dual-perspectives/src/screens/EndScreen.tsx:3:19
+  18 |  import React from "react";
+  19 |  import { useGameStore } from "../store/gameStore";
+  20 |  import styles from "./EndScreen.module.css";
+     |                      ^
+  21 |  const EndScreen = () => {
+  22 |    _s();
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/D
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vit
+      at TransformPluginContext._formatLog (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Docume
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dis
+      at TransformPluginContext.error (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Pro
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/de
+      at normalizeUrl (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/Th
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXg
+      at async file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///Users/jaranarr
+      at async TransformPluginContext.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_module
+      at async TransformPluginContext.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/jara
+      at async EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_mo
+      at async EnvironmentPluginContainer.transform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cu
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node
+      at async loadAndTransform (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Docum
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/di
+      at async viteTransformMiddleware (file:///Users/jaranarroyo/Documents/Cursor%20Projects/ThePMGame/dual-perspectives/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+2:19:42 AM [vite] (client) hmr update /src/App.tsx
+2:19:44 AM [vite] (client) hmr update /src/screens/EndScreen.tsx
+2:19:46 AM [vite] (client) hmr update /src/screens/EndScreen.tsx (x2)
+2:59:52 AM [vite] (client) hmr update /src/App.tsx
+3:00:01 AM [vite] (client) hmr update /src/App.tsx (x2)
+3:00:04 AM [vite] (client) hmr update /src/App.tsx (x3)
+3:00:10 AM [vite] (client) hmr update /src/App.css
+3:00:33 AM [vite] (client) hmr update /src/screens/CaseStudySelectionSc
+3:00:33 AM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx
+12:39:44 PM [vite] (client) hmr update /src/components/ProjectHealthDis
+12:39:44 PM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx
+12:39:52 PM [vite] (client) hmr update /src/components/ProjectHealthDis
+12:39:52 PM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx (x2)
+12:39:52 PM [vite] (client) hmr update /src/components/ProjectHealthDis
+12:39:52 PM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx (x3)
+5:11:35 PM [vite] (client) hmr update /src/components/ProjectHealthDisp
+5:11:35 PM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx (x4)
+5:11:49 PM [vite] (client) hmr update /src/components/ProjectHealthDisp
+5:11:49 PM [vite] (client) hmr update /src/components/ProjectHealthDisplay.tsx (x5)
+10:41:39 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+10:41:39 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx
+10:41:41 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+10:41:41 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x2)
+10:42:00 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+10:42:00 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x3)
+10:42:04 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+10:42:04 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x4)
+10:42:33 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+10:42:33 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x5)
+10:42:33 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+10:42:33 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x6)
+11:33:27 PM [vite] (client) hmr update /src/screens/GameScreen.tsx
+11:33:34 PM [vite] (client) hmr update /src/App.tsx, /src/screens/EndSc
+11:33:34 PM [vite] (client) hmr update /src/App.tsx, /src/screens/EndScreen.tsx, /src/screens/GameScreen.tsx, /src/screens/CaseStudySelectionS
+11:33:34 PM [vite] (client) hmr update /src/App.tsx, /src/screens/EndScreen.tsx, /src/screens/GameScreen.tsx, /src/screens/CaseStudySelectionScreen.tsx, /src/components/RoleSelection.tsx, /src/components/ChoiceLis
+11:33:34 PM [vite] (client) hmr update /src/App.tsx, /src/screens/EndScreen.tsx, /src/screens/GameScreen.tsx, /src/screens/CaseStudySelectionScreen.tsx, /src/components/RoleSelection.tsx, /src/components/ChoiceList.tsx, /src/components/FeedbackPanel.tsx, /src/components/ProjectHealth
+11:33:34 PM [vite] (client) hmr update /src/App.tsx, /src/screens/EndScreen.tsx, /src/screens/GameScreen.tsx, /src/screens/CaseStudySelectionScreen.tsx, /src/components/RoleSelection.tsx, /src/components/ChoiceList.tsx, /src/components/FeedbackPanel.tsx, /src/components/ProjectHealthDisplay.tsx, /src/components/ScenarioDisplay.tsx
+11:33:41 PM [vite] (client) hmr update /src/screens/GameScreen.tsx
+11:36:13 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+11:36:13 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx
+11:36:16 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+11:36:16 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x2)
+11:36:17 PM [vite] (client) hmr update /src/screens/CaseStudySelectionS
+11:36:17 PM [vite] (client) hmr update /src/screens/CaseStudySelectionScreen.tsx (x3)
+    npm run dev
+11:39:40 PM [vite] (client) hmr update /src/components/CaseStudyChatbox
+11:39:40 PM [vite] (client) hmr update /src/components/CaseStudyChatbox.tsx
+11:39:43 PM [vite] (client) hmr update /src/components/CaseStudyChatbox
+11:39:43 PM [vite] (client) hmr update /src/components/CaseStudyChatbox.tsx (x2)
+11:43:20 PM [vite] (client) hmr update /src/components/CaseStudyChatbox
+11:43:20 PM [vite] (client) hmr update /src/components/CaseStudyChatbox.tsx (x3)
+11:43:24 PM [vite] (client) hmr update /src/components/CaseStudyChatbox
+11:43:24 PM [vite] (client) hmr update /src/components/CaseStudyChatbox.tsx (x4)
+10:31:40 AM [vite] .env changed, restarting server...
+10:31:40 AM [vite] .env changed, restarting server... (x2)
+10:31:40 AM [vite] server restarted.
+10:31:53 AM [vite] .env changed, restarting server...
+10:31:53 AM [vite] server restarted.
+10:31:56 AM [vite] .env changed, restarting server...
+10:31:56 AM [vite] server restarted.
+10:32:00 AM [vite] .env changed, restarting server...
+10:32:00 AM [vite] server restarted.
+10:32:02 AM [vite] .env changed, restarting server...
+10:32:02 AM [vite] server restarted.
+npm run dev
+npm run dev

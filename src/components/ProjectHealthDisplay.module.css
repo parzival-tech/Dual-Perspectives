@@ -15,13 +15,16 @@
   border: 1px solid var(--border-color-card, #e0e0e0); /* Use variable */
 }
 
-.metricCard h5 { /* Metric Name */
-  font-size: 0.75em; /* Smaller metric name */
-  font-weight: 500; /* Slightly less bold */
+/* Comment out the old h5 styles as they are replaced by .metricTitleContainer */
+/*
+.metricCard h5 { 
+  font-size: 0.75em; 
+  font-weight: 500; 
   color: var(--text-color-secondary, #6e6e73);
-  margin-bottom: var(--spacing-xs, 4px); /* Reduced margin */
-  text-transform: uppercase; /* Like the reference */
+  margin-bottom: var(--spacing-xs, 4px); 
+  text-transform: uppercase; 
 }
+*/
 
 .metricValue { /* Metric Value */
   font-size: 1.1em; /* Significantly smaller metric value */
@@ -59,4 +62,40 @@
 }
 .scopeRiskValue.mediumRisk {
   color: #ff9500; /* Apple orange for warnings */
+}
+
+.metricValueSuffix {
+  font-size: 0.8em; /* Adjust as needed relative to metricValue */
+  font-weight: 600; /* Match metricValue or be slightly less */
+  color: var(--text-color, #1d1d1f); /* Match metricValue */
+  padding-left: 2px; /* Small space from the number */
+  align-self: baseline; /* Align with the number's baseline */
+}
+
+/* Ensure risk suffixes also get colored correctly if needed */
+.metricValueSuffix.highRisk {
+  color: #ff3b30; 
+}
+.metricValueSuffix.mediumRisk {
+  color: #ff9500; 
+}
+
+.metricTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs, 6px); /* Space between icon and text */
+  font-size: 0.75em; /* Existing h5 font-size */
+  font-weight: 500; /* Existing h5 font-weight */
+  color: var(--text-color-secondary, #6e6e73); /* Existing h5 color */
+  margin-bottom: var(--spacing-xs, 4px); /* Existing h5 margin-bottom */
+  text-transform: uppercase; /* Existing h5 text-transform */
+  line-height: 1.2; /* Added for better vertical alignment with icon */
+}
+
+.metricIcon {
+  width: 1.2em; /* Adjust icon size as needed, relative to font-size of container */
+  height: 1.2em;
+  stroke-width: 2; /* Or your preferred stroke for the icons */
+  color: currentColor; /* Inherits color from .metricTitleContainer */
+  flex-shrink: 0; /* Prevent icon from shrinking if title is long */
 } 

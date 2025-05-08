@@ -1,0 +1,227 @@
+/* dual-perspectives/src/components/CaseStudyChatbox.module.css */
+.chatboxContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 90vw;
+  height: 500px;
+  max-height: 80vh;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-standard);
+  box-shadow: var(--shadow-standard);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000; /* Ensure it's above other content */
+  transition: all 0.3s ease-in-out;
+}
+
+.messagesContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  background-color: var(--background-color-light); /* Make message area distinct if chatbox bg is darker */
+}
+
+.message {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-cards);
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: var(--primary-color);
+  color: var(--button-text-color); /* Assuming primary button text color is suitable */
+  align-self: flex-end;
+  border-bottom-right-radius: var(--border-radius-slight);
+}
+
+.message.ai {
+  background-color: var(--container-background); /* Or var(--card-background) */
+  color: var(--text-color);
+  align-self: flex-start;
+  border: 1px solid var(--border-color-soft);
+  border-bottom-left-radius: var(--border-radius-slight);
+}
+
+.message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.inputContainer {
+  display: flex;
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  background-color: var(--background-color); /* Ensure this matches chatboxContainer or is defined */
+}
+
+.inputField {
+  flex-grow: 1;
+  padding: var(--spacing-md); /* Increased padding for better touch/click area and appearance */
+  border: 1px solid var(--border-color); /* Changed to a more prominent border */
+  border-radius: var(--border-radius-standard);
+  margin-right: var(--spacing-sm);
+  font-size: var(--input-font-size, 1em); /* Consistent font size, define var or use value */
+  background-color: var(--input-field-background, #ffffff); /* Explicit opaque white or light gray */
+  color: var(--text-color-strong, #333333); /* Ensure strong contrast for text */
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: var(--primary-color-active); /* This might become accent-color-active */
+  box-shadow: 0 0 0 2px var(--primary-color-focus-ring); /* This might become accent-color-focus-ring */
+}
+
+.sendButton {
+  padding: var(--spacing-sm) var(--spacing-lg); /* Adjust to match target button */
+  background-color: var(--accent-color-purple, #7c3aed); /* New variable, fallback to a purple */
+  color: var(--button-text-color-light, #ffffff); /* Variable for light text, fallback white */
+  border: none;
+  border-radius: var(--button-pill-radius, 999px); /* For pill shape */
+  cursor: pointer;
+  font-weight: var(--button-font-weight-medium, 500);
+  font-size: var(--button-font-size-small, 0.9em);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.sendButton:hover {
+  background-color: var(--accent-color-purple-hover, #6d28d9);
+  box-shadow: var(--shadow-standard);
+}
+
+.sendButton:disabled {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-text-color);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Basic scrollbar styling for webkit browsers */
+.messagesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: var(--background-color-light);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background-color: var(--border-color-soft);
+  border-radius: 10px;
+  border: 2px solid var(--background-color-light);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-color);
+}
+
+.chatOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+  z-index: 999; /* Below chatboxContainer (1000), above other page content */
+  /* Optional: Add a transition for a fade-in effect */
+  /* opacity: 1; */
+  /* transition: opacity 0.3s ease-in-out; */
+}
+
+/* Styles for V0 Chat Interface */
+.chatboxContainer.v0 {
+  /* Override or add v0 specific chatbox styles if needed */
+  /* e.g., different background, border-radius */
+  background-color: var(--v0-chat-bg, #ffffff);
+  border-radius: var(--v0-chat-border-radius, 12px);
+  box-shadow: var(--v0-chat-shadow, 0px 8px 24px rgba(0,0,0,0.1));
+}
+
+.inputAreaV0 {
+  display: flex;
+  align-items: flex-end; /* Align items to bottom for textarea auto-growth */
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-top: 1px solid var(--v0-border-color, #e0e0e0);
+  background-color: var(--v0-input-area-bg, #ffffff);
+}
+
+.inputFieldV0 {
+  flex-grow: 1;
+  padding: var(--spacing-md);
+  border: 1px solid var(--v0-input-border-color, #d1d5db); /* Light border */
+  border-radius: var(--v0-input-border-radius, 8px);
+  margin-right: var(--spacing-sm);
+  font-size: var(--input-font-size, 1em);
+  background-color: var(--v0-input-field-bg, #ffffff);
+  color: var(--text-color-strong, #333333);
+  resize: none; /* Disable manual resize for textarea */
+  overflow-y: auto; /* Allow scrolling if max-height is reached */
+  line-height: 1.4; /* Adjust for better text readability in textarea */
+  min-height: 24px; /* Minimum height of one line, adjust based on font & padding */
+  max-height: 120px; /* Limit growth to about 5-6 lines */
+}
+
+.inputFieldV0::placeholder {
+  color: var(--v0-placeholder-color, #9ca3af);
+}
+
+.inputFieldV0:focus {
+  outline: none;
+  border-color: var(--v0-input-focus-border, #7c3aed);
+  box-shadow: 0 0 0 1px var(--v0-input-focus-border, #7c3aed);
+}
+
+.sendButtonV0 {
+  background-color: transparent;
+  border: none;
+  padding: var(--spacing-sm); /* Adjust padding for icon button */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Make it circular */
+  width: 40px; /* Fixed size for circular button */
+  height: 40px;
+  transition: background-color 0.2s ease;
+}
+
+.sendButtonV0:hover:not(:disabled) {
+  background-color: var(--v0-icon-button-hover-bg, #f3f4f6);
+}
+
+.sendButtonV0:disabled {
+  cursor: not-allowed;
+}
+
+.sendIcon {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+  fill: var(--v0-icon-color, #6b7280);
+}
+
+.sendButtonV0:disabled .sendIcon {
+ fill: var(--v0-icon-disabled-color, #d1d5db);
+}
+
+.loadingSpinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--v0-spinner-secondary-color, rgba(0,0,0,0.1));
+  border-radius: 50%;
+  border-top-color: var(--v0-spinner-primary-color, #6b7280);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(365deg); }
+} 

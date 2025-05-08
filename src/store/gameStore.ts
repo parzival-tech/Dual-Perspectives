@@ -217,9 +217,9 @@ export const useGameStore = create<GameState>()(
 
 // --- Selectors ---
 // These functions help derive state or get specific parts of it easily in components.
-export const selectCurrentCaseStudy = (state: GameState): CaseStudy | undefined => {
-  if (!state.gameData || !state.currentCaseStudyId) return undefined;
-  return state.gameData.caseStudies.find(cs => cs.id === state.currentCaseStudyId);
+export const selectCurrentCaseStudy = (state: GameState) => {
+  if (!state.gameData || !state.currentCaseStudyId) return null;
+  return state.gameData.caseStudies.find(cs => cs.id === state.currentCaseStudyId) || null;
 };
 
 export const selectCurrentScenarioData = (state: GameState): Scenario | undefined => {
