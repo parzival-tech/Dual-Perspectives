@@ -2,18 +2,12 @@ import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 import type {
   // GameState is defined locally below
-  EffectValues,
   Choice,
   Role,
   Scenario,
-  CaseStudyInitialInfoConstraints, // Used by CaseStudyInitialInfo
-  CaseStudyInitialInfo, // Used by CaseStudy
-  CaseStudy, // Used by GameData and selectors
-  GameData, // Used by GameState
-  PlayerChoiceRecord, // Used by PlayerProgress
-  ProjectHealth, // Used by PlayerProgress
-  PlayerProgress, // Used by GameState
-  CurrentFeedback // Used by GameState
+  GameData, // CaseStudy is used within GameData
+  PlayerProgress, // PlayerChoiceRecord & ProjectHealth used within PlayerProgress
+  CurrentFeedback // EffectValues & CaseStudyInitialInfo... were not directly used
 } from '../types/gameTypes';
 
 // GameState interface defined locally as per user instruction
